@@ -26,10 +26,16 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 	}
 
 	/**
-	 * struts和spring整合过程中按名称自动注入的业务类
+	 * struts和spring整合过程中按名称自动注入的业务类.
+	 * 
 	 */
 	private ProductService productService;
 
+	
+	/**
+	 * 这个方法是否调用与struts.xml中的action创建方式有关, 如果action由struts自己创建,则会调用,如果action由spring创建,则不会调用
+	 * @param productService
+	 */
 	public void setProductService(ProductService productService) {
 		System.out.println("ProductAction setProductService");
 		this.productService = productService;

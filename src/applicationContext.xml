@@ -34,6 +34,11 @@
        		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
+	<!-- 配置action的类 -->
+	<bean id="productAction" class="cn.muke.ssh.action.ProductAction">
+		<property name="productService" ref="productService"></property>
+	</bean>
+	
 	<!-- 配置业务层的类 -->
 	<bean id="productService" class="cn.muke.ssh.service.ProductService">
 		<property name="productDao" ref="productDao"></property>

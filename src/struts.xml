@@ -20,10 +20,12 @@
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings> -->
 
-		<!-- action类的创建方式有两种, 1:由structs自己创建,2:由spring创建. 下面是第一种方式 -->
-		<!-- 方式1:action类由Structs自己创建 -->
 		<!-- 这里action的name对应addProduct.jsp中form表单中的action -->
-        <action name="product_*" class="cn.muke.ssh.action.ProductAction" method="{1}">
+		<!-- action类的创建方式有两种, 1:由structs自己创建,2:由spring创建. 下面是第一种方式 -->
+		<!-- 方式1:类名写全路径,action类由Structs自己创建 -->
+		<action name="product_*" class="cn.muke.ssh.action.ProductAction" method="{1}">
+		<!-- 方式2:类名写applicationContext.xml中配置的类(bean)id,action类由spring创建 -->
+        <!-- <action name="product_*" class="productAction" method="{1}"> -->
             <!-- <result type="redirectAction">
                 <param name="actionName">HelloWorld</param>
                 <param name="namespace">/example</param>
