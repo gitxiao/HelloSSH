@@ -16,6 +16,7 @@ public class ProductService {
 	private ProductDao productDao;
 
 	public void setProductDao(ProductDao productDao) {
+		System.out.println("ProductService setProductDao");
 		this.productDao = productDao;
 	}
 	
@@ -23,7 +24,7 @@ public class ProductService {
 	 * service中的保存方法
 	 */
 	public void save(Product product){
-		System.out.println("service中的保存方法");
+		System.out.println("ProductService service中的保存方法 save");
 		productDao.save(product);
 	}
 }

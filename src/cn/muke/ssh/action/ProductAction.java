@@ -21,6 +21,7 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 	@Override
 	public Product getModel() {
 		// TODO Auto-generated method stub
+		System.out.println("ProductAction getModel");
 		return null;
 	}
 
@@ -30,6 +31,7 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 	private ProductService productService;
 
 	public void setProductService(ProductService productService) {
+		System.out.println("ProductAction setProductService");
 		this.productService = productService;
 	}
 
@@ -37,7 +39,7 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 	 * 保存商品的方法
 	 */
 	public String save(){
-		System.out.println("action 中的保存");
+		System.out.println("ProductAction action 中的save");
 		productService.save(product);
 		return null;
 	}

@@ -10,6 +10,6 @@ import cn.muke.ssh.domain.Product;
 public class ProductDao {
 
 	public void save(Product product){
-		System.out.println("dao中的保存方法");
+		System.out.println("ProductDao dao中的保存方法");
 	}
 }
