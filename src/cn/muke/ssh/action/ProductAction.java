@@ -49,6 +49,4 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 		productService.save(product);
 		return null;
 	}
-	
-	
 }

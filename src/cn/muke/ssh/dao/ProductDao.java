@@ -11,5 +11,8 @@ public class ProductDao {
 
 	public void save(Product product){
 		System.out.println("ProductDao dao中的保存方法");
+		System.out.println("product.getName() = " + product.getPname());
+		System.out.println("product.getPid() = " + product.getPid());
+		System.out.println("product.getPrice() = " + product.getPrice());
 	}
 }
