@@ -1,5 +1,7 @@
 package cn.muke.ssh.service;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import cn.muke.ssh.dao.ProductDao;
 import cn.muke.ssh.domain.Product;
 
@@ -8,6 +10,7 @@ import cn.muke.ssh.domain.Product;
  * @author Cfrjkj
  *
  */
+@Transactional					//ÊÂÎñ×¢½â
 public class ProductService {
 
 	/**

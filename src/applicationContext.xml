@@ -66,9 +66,11 @@
 	</bean>
 	
 	<!-- 配置事务管理器 -->
-	<bean id="transanctionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
         <property name="scopes">

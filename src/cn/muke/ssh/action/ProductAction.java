@@ -1,11 +1,10 @@
 package cn.muke.ssh.action;
-
-
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
-
 import cn.muke.ssh.domain.Product;
 import cn.muke.ssh.service.ProductService;
+
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 
 /**
  * 商品action类
@@ -17,12 +16,30 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 	/**
 	 * 模型驱动使用的类
 	 */
-	private Product product = new Product();
+	private Product product;
+
+	
+	/**
+	 * strut2的默认执行函数,如果strut.xml中的action没有配置method属性的话,默认执行这个函数,否则不会执行
+	 */
+	@Override
+	public String execute() throws Exception{
+		System.out.println("ProductAction execute");
+		return Action.SUCCESS;
+	}
+	
+	
+	/**
+	 * 覆盖继承自ModelDriven的方法,所谓ModelDriven，意思是直接把实体类当成页面数据的收集对象
+	 */
 	@Override
 	public Product getModel() {
 		// TODO Auto-generated method stub
 		System.out.println("ProductAction getModel");
-		return null;
+		if(product == null){
+			product = new Product();
+		}
+		return product;
 	}
 
 	/**

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>保存商品</h1>
-	<!-- 这里的action对应struts.xml中配置的action,save对应该action相关类中的方法 -->
+	<!-- 这里的action对应struts.xml中配置的action,save对应该action相关类中的方法  theme="simple"表示jsp页面的样式不受struts标签影响 -->
 	<s:form action="product_save" method="post" namespace="/" theme="simple">
 		<table border="1" width="400">
 			<tr>
